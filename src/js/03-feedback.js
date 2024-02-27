@@ -53,7 +53,7 @@
 //   console.log('parse error:' + error);
 // }
 
-import { _ } from 'lodash';
+import _ from 'lodash';
 
 const emailInput = document.querySelector("[name='email']");
 const messageInput = document.querySelector("[name='message']");
@@ -75,7 +75,7 @@ function saveInput() {
   }
 }
 
-const throttleSave = throttle(saveInput, 500);
+const throttleSave = _.throttle(saveInput, 500);
 
 emailInput.addEventListener('input', throttleSave);
 messageInput.addEventListener('input', throttleSave);
